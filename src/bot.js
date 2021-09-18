@@ -5,9 +5,8 @@ const {Client, Intents} = require("discord.js");
 const config = require("./config.json");
 const search = require("youtube-search");
 
-const client = new Client({intents:[
-    Intents.FLAGS.GUILDS, 
-    Intents.FLAGS.GUILD_MESSAGES]});
+//play songs consts
+const queue = new map
 
 //msg for sian yin
 client.on("messageCreate", (message) => {
@@ -21,6 +20,11 @@ client.on("messageCreate", (message) => {
 
 
 //login
+const client = new Client({intents:[
+    Intents.FLAGS.GUILDS, 
+    Intents.FLAGS.GUILD_MESSAGES]
+});
+
 client.on("ready", () => {
     var d = new Date();
     console.log(`LOGGED IN AT ${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}`);
