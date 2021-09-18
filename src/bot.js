@@ -13,8 +13,16 @@ const opts = {
     type : "video"
 }
 
-//play songs consts
-const queue = new map
+//LOGIN
+const client = new Client({intents:[
+    Intents.FLAGS.GUILDS, 
+    Intents.FLAGS.GUILD_MESSAGES]
+});
+client.on("ready", () => {
+    var d = new Date();
+    console.log(`LOGGED IN AT ${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}`);
+});
+client.login(config.TOKEN);
 
 //msg for sian yin
 client.on("messageCreate", (message) => {
@@ -43,7 +51,7 @@ client.on("messageCreate", async function(message) {
             await message.channel.send({embeds: [embedNotif]});
 
             //ensuring the collected msg is from the person who wanted to search
-            let filter = function(m) {
+            let filter = (m) => {
                 m.author.id === message.author.id
             };
 
@@ -68,22 +76,10 @@ client.on("messageCreate", async function(message) {
 
                 //creating and sending the result as an embed message
                 let embedResult = new discord.MessageEmbed()
-                .setTitle(`Now Playing - ${title}`)
+                .setTitle(`Now Playing: ${title}`)
                 .setDescription(`Channel: ${channelName}\nLink: ${link}`);
                 message.channel.send({embeds: [embedResult]});
             }
         break;
     }
 });
-
-//login
-const client = new Client({intents:[
-    Intents.FLAGS.GUILDS, 
-    Intents.FLAGS.GUILD_MESSAGES]
-});
-
-client.on("ready", () => {
-    var d = new Date();
-    console.log(`LOGGED IN AT ${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}`);
-});
-client.login(config.TOKEN);
