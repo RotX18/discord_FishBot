@@ -6,7 +6,7 @@ bot.js
 
 discordjs docs - https://discord.js.org/#/docs/main/stable/general/welcome
 bot basics - https://www.youtube.com/watch?v=BmKXBVdEV0g&ab_channel=TraversyMedia
-
+youtube search commands - https://www.youtube.com/watch?v=QCWhmN1Qcjw&ab_channel=AnsontheDeveloper
 
 
 commands.js
