@@ -1,4 +1,5 @@
 {
-    "TOKEN" : "ODg4MzkxMDM0NjU1MDk2OTAy.YUSAoA.Dza6N5eqowc6j6fA6kJQkDhR0x4",
-    "YOUTUBE_API" : "AIzaSyDEdbdcXC4s0JMbyQzzUFAfqsqLmF6xgRY"
+    "API_YOUTUBE" : "AIzaSyDEdbdcXC4s0JMbyQzzUFAfqsqLmF6xgRY",
+    "ID_CLIENT" : "888391034655096902",
+    "TOKEN" : "ODg4MzkxMDM0NjU1MDk2OTAy.YUSAoA.cjlY3hOQNM3wEm-JirfKpZFiKDk"
 }

@@ -1,3 +1,5 @@
+//MAIN JS FILE FOR THE BOT
+//https://discord.js.org/#/docs/main/stable/general/welcome
 //constants
 const {Client, Intents} = require("discord.js");
 const config = require("./config.json");
@@ -6,7 +8,6 @@ const search = require("youtube-search");
 const client = new Client({intents:[
     Intents.FLAGS.GUILDS, 
     Intents.FLAGS.GUILD_MESSAGES]});
-const prefix = "!f";
 
 //msg for sian yin
 client.on("messageCreate", (message) => {
@@ -17,6 +18,7 @@ client.on("messageCreate", (message) => {
         message.reply("yes, sian yin is best girl");
     }
 });
+
 
 //login
 client.on("ready", () => {
